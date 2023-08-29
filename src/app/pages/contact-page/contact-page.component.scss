@@ -2,7 +2,8 @@
     display: grid;
     gap: 1em;
 
-    .btn-add {
-        justify-self: end;
+    .actions {
+        display: flex;
+        justify-content: space-between;
     }
 }
