@@ -16,4 +16,10 @@ export class ContactPageComponent implements OnInit {
   ngOnInit(): void {
     this.contacts$ = this.contactService.contacts$
   }
+
+  onRemoveContact(contactId: string) {
+    this.contactService.deleteContact(contactId).subscribe({
+        error: err => console.log('err:', err)
+    })
+}
 }

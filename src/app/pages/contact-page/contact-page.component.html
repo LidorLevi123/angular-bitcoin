@@ -3,5 +3,5 @@
         <contact-filter></contact-filter>
         <button class="btn-add">Add contact</button>
     </div>
-    <contact-list [contacts]="contacts$ | async"></contact-list>
+    <contact-list [contacts]="contacts$ | async" (remove)="onRemoveContact($event)"></contact-list>
 </section>

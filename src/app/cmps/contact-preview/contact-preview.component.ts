@@ -11,6 +11,4 @@ export class ContactPreviewComponent {
 
   @Input() contact!: Contact
   @Output() remove = new EventEmitter<string>()
-
-  
 }
