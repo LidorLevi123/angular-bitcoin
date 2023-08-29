@@ -6,7 +6,7 @@
         </a>
         <section class="actions">
             <button (click)="remove.emit(contact._id)" class="remove-btn">X</button>
-            <a [routerLink]="['edit', contact._id]">Edit</a>
+            <a [routerLink]="'/edit/' + contact._id">Edit</a>
         </section>
     </section>
     <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">

@@ -1,7 +1,7 @@
 <section class="contact-page">
     <div class="actions">
         <contact-filter></contact-filter>
-        <button class="btn-add">Add contact</button>
+        <a routerLink="/edit">Add Contact</a>
     </div>
     <contact-list [contacts]="contacts$ | async" (remove)="onRemoveContact($event)"></contact-list>
 </section>
