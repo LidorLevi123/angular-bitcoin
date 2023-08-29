@@ -1,5 +1,4 @@
 export class Contact {
-
     constructor(
         public name: string = '',
         public email: string = '',
@@ -15,3 +14,6 @@ export class Contact {
     }
 }
 
+export interface ContactFilter {
+    term: string
+}

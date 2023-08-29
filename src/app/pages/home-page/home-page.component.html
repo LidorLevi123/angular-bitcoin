@@ -1,0 +1,6 @@
+<section class="home-page">
+    <h1>Hello {{ user?.name }}!</h1>
+    <h3>Coins: {{ user?.coins }}</h3>
+    <h3>BTC: {{ BTC$ | async }}</h3>
+    <button (click)="onAddCoins()">Add coins</button>
+</section>
