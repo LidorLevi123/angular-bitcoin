@@ -1,8 +1,8 @@
 import { Component, ChangeDetectorRef, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ContactService } from 'src/app/services/contact.service';
 import { Observable, Subscription, map } from 'rxjs';
 import { Contact } from 'src/app/models/contact.model';
+import { LoaderService } from 'src/app/services/loader.service';
 
 @Component({
   selector: 'contact-details',
@@ -12,7 +12,7 @@ import { Contact } from 'src/app/models/contact.model';
 export class ContactDetailsComponent implements OnInit, OnDestroy {
 
   constructor(
-    private contactService: ContactService,
+    private loaderService: LoaderService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
@@ -22,6 +22,7 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
   contact!: Contact
 
   ngOnInit(): void {
+    this.loaderService.setIsLoading(false)
     this.contact$ = this.route.data.pipe(map(data => data['contact']))
   }
 

@@ -14,6 +14,7 @@ import { ContactDetailsComponent } from './pages/contact-details/contact-details
 import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.component';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
+import { LoaderComponent } from './cmps/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ContactEditComponent } from './pages/contact-edit/contact-edit.componen
     ContactPreviewComponent,
     ContactDetailsComponent,
     ContactFilterComponent,
-    ContactEditComponent
+    ContactEditComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

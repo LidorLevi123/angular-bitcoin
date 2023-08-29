@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { Contact } from 'src/app/models/contact.model';
 import { ContactService } from 'src/app/services/contact.service';
+import { LoaderService } from 'src/app/services/loader.service';
 import { CustomValidators } from 'src/app/validators/custom-validators';
 
 @Component({
@@ -16,6 +17,7 @@ export class ContactEditComponent implements OnInit {
   private route = inject(ActivatedRoute)
   private router = inject(Router)
   private fb = inject(FormBuilder)
+  private loaderService = inject(LoaderService)
 
   form!: FormGroup
   contact!: Contact
@@ -29,6 +31,7 @@ export class ContactEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loaderService.setIsLoading(false)
     this.route.data
       .pipe(
         map(data => data['contact'] ? data['contact'] : this.contactService.getEmptyContact()),
