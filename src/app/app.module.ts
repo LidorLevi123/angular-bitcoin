@@ -8,6 +8,9 @@ import { AppFooterComponent } from './cmps/app-footer/app-footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { ContactListComponent } from './cmps/contact-list/contact-list.component';
+import { ContactPreviewComponent } from './cmps/contact-preview/contact-preview.component';
+import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     AppHeaderComponent,
     AppFooterComponent,
     HomePageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    ContactListComponent,
+    ContactPreviewComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,
