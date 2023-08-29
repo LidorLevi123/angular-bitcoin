@@ -9,6 +9,11 @@ header {
 
     h1.logo {
         flex-grow: 1;
+
+        a {
+            text-decoration: none;
+            cursor: default;
+        }
     }
 
     nav {

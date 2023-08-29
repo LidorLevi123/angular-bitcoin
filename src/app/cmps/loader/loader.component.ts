@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoaderService } from 'src/app/services/loader.service';
 
 @Component({
   selector: 'loader',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./loader.component.scss']
 })
 export class LoaderComponent {
-
+  constructor(private loaderService: LoaderService) { }
+  isLoading$ = this.loaderService.isLoading$
 }
