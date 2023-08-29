@@ -15,6 +15,7 @@ import { ContactFilterComponent } from './cmps/contact-filter/contact-filter.com
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
 import { LoaderComponent } from './cmps/loader/loader.component';
+import { StatisticPageComponent } from './pages/statistic-page/statistic-page.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LoaderComponent } from './cmps/loader/loader.component';
     ContactDetailsComponent,
     ContactFilterComponent,
     ContactEditComponent,
-    LoaderComponent
+    LoaderComponent,
+    StatisticPageComponent
   ],
   imports: [
     BrowserModule,

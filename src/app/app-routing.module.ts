@@ -4,6 +4,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
+import { StatisticPageComponent } from './pages/statistic-page/statistic-page.component';
 import { contactResolver } from './resolvers/contact.resolver';
 import { authGuard } from './guards/auth.guard';
 
@@ -17,7 +18,8 @@ const routes: Routes = [
     resolve: { contact: contactResolver }
   },
   { path: 'edit', component: ContactEditComponent },
-  { path: 'edit/:id', component: ContactEditComponent, resolve: { contact: contactResolver } }
+  { path: 'edit/:id', component: ContactEditComponent, resolve: { contact: contactResolver } },
+  { path: 'statistic', component: StatisticPageComponent }
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
