@@ -17,6 +17,7 @@ import { ContactEditComponent } from './pages/contact-edit/contact-edit.componen
 import { LoaderComponent } from './cmps/loader/loader.component';
 import { StatisticPageComponent } from './pages/statistic-page/statistic-page.component';
 import { TransferCoinComponent } from './cmps/transfer-coin/transfer-coin.component';
+import { MoveListcComponent } from './cmps/move-list/move-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TransferCoinComponent } from './cmps/transfer-coin/transfer-coin.compon
     ContactEditComponent,
     LoaderComponent,
     StatisticPageComponent,
-    TransferCoinComponent
+    TransferCoinComponent,
+    MoveListcComponent
   ],
   imports: [
     BrowserModule,

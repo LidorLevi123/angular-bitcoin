@@ -1,0 +1,8 @@
+<ul>
+    <h3>Your moves:</h3>
+    <li *ngFor="let move of moves">
+        <span>to: {{ move.to }}</span>
+        <span>at: {{ move.at | date: 'mediumDate'}} {{ move.at | date: 'mediumTime'}}</span>
+        <span>amount: ${{ move.amount }}</span>
+    </li>
+</ul>

@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSendCoins()">
+<form (ngSubmit)="transfer.emit(amount)">
     <h3>Transfer coins to {{ contactName }}</h3>
     <input [(ngModel)]="amount" type="number" name="amount" placeholder="Enter amount of coins">
     <button>Send</button>

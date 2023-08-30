@@ -1,11 +1,16 @@
 <section *ngIf="contact$ | async as contact" class="contact-details">
-    <p><b>Name:</b> {{contact.name}}</p>
-    <p><b>Phone:</b> {{contact.phone}}</p>
-    <p><b>Email:</b> {{contact.email}}</p>
-    <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
-    <transfer-coin [contactName]="contact.name"></transfer-coin>
-    <section class="actions">
-        <button (click)="onBack()" class="back-btn">Back</button>
-        <button [routerLink]="'/edit/' + contact._id" class="edit-btn">Edit</button>
-    </section>
+    <div>
+        <p><b>Name:</b> {{contact.name}}</p>
+        <p><b>Phone:</b> {{contact.phone}}</p>
+        <p><b>Email:</b> {{contact.email}}</p>
+        <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
+        <section class="actions">
+            <button (click)="onBack()" class="back-btn">Back</button>
+            <button [routerLink]="'/edit/' + contact._id" class="edit-btn">Edit</button>
+        </section>
+    </div>
+    <div>
+        <transfer-coin (transfer)="onTransferCoins($event)" [user]="user" [contactName]="contact.name"></transfer-coin>
+        <move-list [moves]="user?.moves"></move-list>
+    </div>
 </section>
