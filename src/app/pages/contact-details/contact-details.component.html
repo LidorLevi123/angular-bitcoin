@@ -3,7 +3,9 @@
     <p><b>Phone:</b> {{contact.phone}}</p>
     <p><b>Email:</b> {{contact.email}}</p>
     <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
+    <transfer-coin [contactName]="contact.name"></transfer-coin>
     <section class="actions">
         <button (click)="onBack()" class="back-btn">Back</button>
+        <button [routerLink]="'/edit/' + contact._id" class="edit-btn">Edit</button>
     </section>
 </section>

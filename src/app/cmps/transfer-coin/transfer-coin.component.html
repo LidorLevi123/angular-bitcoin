@@ -1,0 +1,6 @@
+<form (ngSubmit)="onSendCoins()">
+    <h3>Transfer coins to {{ contactName }}</h3>
+    <input [(ngModel)]="amount" type="number" name="amount" placeholder="Enter amount of coins">
+    <button>Send</button>
+    <p>Your balance: ${{ user?.coins }}</p>
+</form>

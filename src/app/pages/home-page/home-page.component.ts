@@ -19,14 +19,13 @@ export class HomePageComponent implements OnInit {
   private bitcoinService = inject(BitcoinService)
 
   ngOnInit(): void {
-    this.user = this.userService.getLoggedInUser()
-    this.BTC$ = this.bitcoinService.getRate(this.user.coins)
+    this.userService.loggedInUser$.subscribe(user => {
+      this.user = user
+      this.BTC$ = this.bitcoinService.getRate(this.user.coins)
+    })
   }
 
   onAddCoins() {
-    if(this.user) {
-      this.user.coins += 1326
-      this.BTC$ = this.bitcoinService.getRate(this.user.coins)
-    }
+      this.userService.updateCoins(1326)
   }
 }

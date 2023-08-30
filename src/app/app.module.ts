@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
 import { LoaderComponent } from './cmps/loader/loader.component';
 import { StatisticPageComponent } from './pages/statistic-page/statistic-page.component';
+import { TransferCoinComponent } from './cmps/transfer-coin/transfer-coin.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { StatisticPageComponent } from './pages/statistic-page/statistic-page.co
     ContactFilterComponent,
     ContactEditComponent,
     LoaderComponent,
-    StatisticPageComponent
+    StatisticPageComponent,
+    TransferCoinComponent
   ],
   imports: [
     BrowserModule,
